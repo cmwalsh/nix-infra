@@ -7,6 +7,7 @@
     inputs.nixos-hardware.nixosModules.framework-13-7040-amd
     inputs.disko.nixosModules.disko
     ./disk-config.nix
+    ./hardware-configuration.nix
     ../../nixos/profiles/workstation.nix
   ];
 
