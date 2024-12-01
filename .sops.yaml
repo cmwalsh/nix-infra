@@ -1,0 +1,9 @@
+keys:
+  - &user_craig 
+  - &host_defiant 
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+    - age:
+      - *user_craig
+      - *host_defiant
