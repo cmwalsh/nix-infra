@@ -56,6 +56,7 @@
       ssh-to-age
       wl-clipboard
       unzip
+      borgbackup
     ];
 
     variables = {

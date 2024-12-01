@@ -39,6 +39,7 @@
         # Utility
         kitty
         ventoy
+        vorta
       ])
       ++ (with pkgs-unstable; [
         # Dev
