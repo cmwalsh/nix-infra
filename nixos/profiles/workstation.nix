@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
 
   imports = [
     ../desktops/kde.nix
@@ -13,7 +13,15 @@
   ];
 
   # Enable OpenGL
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+
+    # Enable OpenCL
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+    ];
+  };
 
   # Install a web browser
   programs.firefox.enable = true;

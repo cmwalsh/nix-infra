@@ -9,6 +9,7 @@
     ./disk-config.nix
     ./hardware-configuration.nix
     ../../nixos/profiles/workstation.nix
+    ../../nixos/services/tailscale.nix
   ];
 
   # Enable zram

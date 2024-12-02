@@ -57,6 +57,7 @@
       wl-clipboard
       unzip
       borgbackup
+      clinfo
     ];
 
     variables = {
