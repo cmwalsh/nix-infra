@@ -44,4 +44,7 @@
       "networkmanager"
     ];
   };
+
+  # Welcome message
+  programs.zsh.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" defiant";
 }

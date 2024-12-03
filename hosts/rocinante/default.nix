@@ -44,4 +44,7 @@
     description = "System Administrator";
     extraGroups = ["wheel"];
   };
+
+  # Welcome message
+  programs.bash.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" rocinante";
 }

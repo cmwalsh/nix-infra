@@ -59,6 +59,7 @@
       borgbackup
       clinfo
       pavucontrol
+      figurine
     ];
 
     variables = {
