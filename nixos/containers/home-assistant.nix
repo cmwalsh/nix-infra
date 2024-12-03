@@ -5,15 +5,15 @@
       hostname = "automata";
       autoStart = true;
 
-      environment = {
-        TZ = "Europe/London";
-      };
-
       volumes = [
         "/mnt/ironwolf/appdata/home-assistant:/config"
         "/etc/localtime:/etc/localtime:ro"
         "/run/dbus:/run/dbus:ro"
       ];
+
+      environment = {
+        TZ = "Europe/London";
+      };
 
       extraOptions = [
         "--device=/dev/ttyUSB0"

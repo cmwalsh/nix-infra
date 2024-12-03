@@ -3,7 +3,7 @@
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override {enableHybridCodec = true;};
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     # hardware.graphics on unstable
     enable = true;
 
