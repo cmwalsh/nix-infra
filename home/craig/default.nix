@@ -26,6 +26,9 @@
         spotify
         haruna
 
+        # Audio
+        easyeffects
+
         # Comms
         discord
         teams-for-linux

@@ -58,6 +58,7 @@
       unzip
       borgbackup
       clinfo
+      pavucontrol
     ];
 
     variables = {
