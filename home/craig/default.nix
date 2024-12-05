@@ -26,9 +26,6 @@
         spotify
         haruna
 
-        # Audio
-        easyeffects
-
         # Comms
         discord
         teams-for-linux
@@ -38,8 +35,11 @@
         # Productivity
         obsidian
         thunderbird-128
+        protonmail-desktop
+        google-chrome
 
         # Utility
+        bitwarden
         kitty
         ventoy
         vorta
