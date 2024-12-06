@@ -8,11 +8,15 @@
     homeDirectory = "/home/craig";
     stateVersion = "24.11";
 
+    sessionVariables = {
+      PNPM_HOME = "/home/craig/.config/pnpm/global";
+    };
+
     packages =
       (with pkgs; [
         # Dev
         nodejs_22
-        yarn-berry
+        pnpm
         vscode
         nixd
         nil
@@ -97,6 +101,7 @@
       ## case insensitive path-completion
       zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
       zstyle ':completion:*' menu select
+      path+=('/home/craig/.config/pnpm/global')
     '';
   };
 
