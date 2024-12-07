@@ -11,21 +11,21 @@
       maxUploadSize = "16G";
       https = true;
       autoUpdateApps.enable = true;
-    };
 
-    settings = {
-      overwriteProtocol = "https";
-      default_phone_region = "GB";
-    };
+      settings = {
+        overwriteProtocol = "https";
+        default_phone_region = "GB";
+      };
 
-    config = {
-      dbtype = "pgsql";
-      adminuser = "admin";
-      adminpassFile = config.sops.nc_admin_pw.path;
-    };
+      config = {
+        dbtype = "pgsql";
+        adminuser = "admin";
+        adminpassFile = config.sops.nc_admin_pw.path;
+      };
 
-    # Suggested by Nextcloud's health check.
-    phpOptions."opcache.interned_strings_buffer" = "16";
+      # Suggested by Nextcloud's health check.
+      phpOptions."opcache.interned_strings_buffer" = "16";
+    };
   };
 
   sops.secrets.nc_admin_pw.owner = config.users.sysadmin.name;
