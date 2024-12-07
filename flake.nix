@@ -72,6 +72,7 @@
         specialArgs = {
           inherit inputs;
           inherit pkgs-unstable;
+          username = "craig";
         };
 
         modules = [
@@ -102,6 +103,7 @@
         specialArgs = {
           inherit inputs;
           inherit pkgs-unstable;
+          username = "sysadmin";
         };
 
         modules = [
@@ -117,6 +119,7 @@
         specialArgs = {
           inherit inputs;
           inherit pkgs-unstable;
+          username = "sysadmin";
         };
 
         modules = [

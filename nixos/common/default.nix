@@ -1,11 +1,12 @@
 {
   inputs,
   pkgs,
+  username,
   ...
 }: {
-  # imports = [
-  #   inputs.sops-nix.nixosModules.sops
-  # ];
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+  ];
 
   nix = {
     # Use flakes
@@ -96,21 +97,19 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  # SOPS configuration
-  # sops = {
-  #   defaultSopsFile = ../../secrets/serenity.yaml;
-  #   validateSopsFiles = false;
+  #SOPS configuration
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    validateSopsFiles = false;
 
-  #   age = {
-  #     sshKeyPaths = [ "/home/${username}/.ssh/id_ed25519" ];
-  #     keyFile = "/var/lib/sops-nix/key.txt";
-  #     generateKey = true;
-  #   };
+    age = {
+      sshKeyPaths = [ "/home/${username}/.ssh/id_ed25519" ];
+      keyFile = "/var/lib/sops-nix/key.txt";
+      generateKey = true;
+    };
 
-  #   secrets = {
-
-  #   };
-  # };
+    secrets.test = {};
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
