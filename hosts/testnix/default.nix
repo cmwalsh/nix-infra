@@ -19,7 +19,7 @@
   # Networking
   networking = {
     hostName = "testnix";
-    # hostId = "";
+    hostId = "c3da6ae5";
     domain = "serenity.lan";
   };
 

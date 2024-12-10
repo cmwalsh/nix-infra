@@ -22,7 +22,7 @@
   # Networking
   networking = {
     hostName = "firefly";
-    # hostId = "";
+    hostId = "e89d6cdd";
     domain = "serenity.lan";
 
     interfaces.eth0 = {
