@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../nixos/profiles/workstation.nix
     ../../nixos/services/tailscale.nix
+    ../../nixos/features/virt-manager.nix
   ];
 
   # Enable zram
@@ -42,6 +43,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "libvirtd"
     ];
   };
 

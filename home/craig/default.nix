@@ -71,6 +71,12 @@
       init = {
         defaultBranch = "main";
       };
+      push = {
+        default = "matching";
+      };
+        pull = {
+        rebase = false;
+      };
     };
   };
 
@@ -108,5 +114,13 @@
   # Starship
   programs.starship = {
     enable = true;
+  };
+
+  # Setup connection to libvirt
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
   };
 }
