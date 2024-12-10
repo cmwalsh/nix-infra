@@ -27,7 +27,7 @@
   # Networking
   networking = {
     hostName = "defiant";
-    # hostId = "";
+    hostId = "c653d30b";
     domain = "serenity.lan";
     networkmanager.enable = true;
   };

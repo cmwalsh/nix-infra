@@ -22,7 +22,7 @@
   # Networking
   networking = {
     hostName = "rocinante";
-    # hostId = "";
+    hostId = "609e7390";
     domain = "rocinante.lan";
 
     interfaces.eth0 = {
