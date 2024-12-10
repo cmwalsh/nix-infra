@@ -127,6 +127,22 @@
           ./nixos/common
         ];
       };
+
+      # TestNix (Server - Test)
+      testnix = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = {
+          inherit inputs;
+          inherit pkgs-unstable;
+          username = "sysadmin";
+        };
+
+        modules = [
+          ./hosts/testnix
+          ./nixos/common
+        ];
+      };
     };
 
     homeConfigurations = {
