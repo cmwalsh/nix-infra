@@ -1,7 +1,10 @@
 { ... }: {
 
   boot.zfs = {
-    devNodes = "/dev/disk/by-partuuid";
+    # Ensure a serial number is added
+    # to any virtual storage if using a VM
+    # Use uuidgen command
+    devNodes = "/dev/disk/by-id";
     forceImportAll = true;
   };
 

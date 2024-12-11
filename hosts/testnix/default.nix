@@ -3,7 +3,6 @@
     inputs.disko.nixosModules.disko
     ./disk-config.nix
     ./hardware-configuration.nix
-    ../../nixos/profiles/server.nix
     ../../nixos/features/zfs.nix
   ];
 
@@ -25,6 +24,9 @@
     hostId = "c3da6ae5";
     domain = "serenity.lan";
   };
+
+  # Open SSH for this configuration only
+  services.openssh.enable = true;
 
   # Users
   users.users.sysadmin = {
