@@ -2,7 +2,7 @@
   imports = [
     inputs.disko.nixosModules.disko
     ./disk-config.nix
-    ./hardware-configuraton.nix
+    ./hardware-configuration.nix
     ../../nixos/profiles/server.nix
   ];
 
@@ -16,6 +16,7 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.zfs.extraPools = [ "ironwolf" ];
 
   # Networking
   networking = {
