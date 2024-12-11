@@ -1,7 +1,7 @@
 { ... }: {
 
   boot.zfs = {
-    devNodes = "/dev/disk/by-id/";
+    devNodes = "/dev/disk/by-partuuid";
     forceImportAll = true;
   };
 
