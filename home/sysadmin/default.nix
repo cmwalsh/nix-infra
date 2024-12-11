@@ -41,7 +41,7 @@
       zstyle ':completion:*' menu select
     '';
 
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
     };
