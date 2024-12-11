@@ -108,6 +108,9 @@
       zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
       zstyle ':completion:*' menu select
       path+=('/home/craig/.config/pnpm/global')
+
+      # kitty ssh fix
+      [[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
     '';
   };
 
