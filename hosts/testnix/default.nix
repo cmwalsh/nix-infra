@@ -20,7 +20,7 @@
 
   # Fix for running ZFS in a virtual machine
   # https://nixos.wiki/wiki/ZFS (at the end)
-  boot.zfs.devNodes = "/dev/disk/by-path";
+  boot.zfs.devNodes = "/dev/disk/by-partuuid";
 
   # Networking
   networking = {
