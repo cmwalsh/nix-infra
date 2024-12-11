@@ -70,13 +70,6 @@
     };
   };
 
-  # Firmware updates
-  # https://nixos.wiki/wiki/Fwupd
-  services = {
-    fwupd.enable = true;
-    smartd.enable = true;
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/London";
 

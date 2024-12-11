@@ -23,6 +23,13 @@
     ];
   };
 
+  # Firmware updates
+  # https://nixos.wiki/wiki/Fwupd
+  services = {
+    fwupd.enable = true;
+    smartd.enable = true;
+  };
+
   # Install a web browser
   programs.firefox.enable = true;
 }
