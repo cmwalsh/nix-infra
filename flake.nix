@@ -159,6 +159,15 @@
           ./home/craig
         ];
       };
+
+      # User System Administrator
+      "sysadmin" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+        modules = [
+          ./home/sysadmin
+        ];
+      };
     };
   };
 }

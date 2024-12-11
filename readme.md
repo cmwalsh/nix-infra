@@ -38,3 +38,15 @@ sudo nixos-install --root /mnt --flake .#host
 7. Log in as user and generate SSH keys
 8. Add SSH key to Github and clone the flake (using SSH)
 9. Re-copy the `hardware-configuration.nix` file and commit changes
+
+# Home Manager
+
+Home Manager is installed as a stand alone program.
+
+1. `nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manage`
+2. `nix-channel --update`
+3. `nix-shell '<home-manager>' -A install`
+
+# Testnix configuration
+
+The host `testnix` is a VM I use to test Nix configurations. Please do not copy the configuration from that host.
