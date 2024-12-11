@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [
     inputs.disko.nixosModules.disko
     ./disk-config.nix
@@ -28,10 +28,14 @@
   # Open SSH for this configuration only
   services.openssh.enable = true;
 
+  # Enable ZSH
+  programs.zsh.enable = true;
+
   # Users
   users.users.sysadmin = {
     isNormalUser = true;
     description = "System Administrator";
+    shell = pkgs.zsh;
     extraGroups = ["wheel"];
   };
 
