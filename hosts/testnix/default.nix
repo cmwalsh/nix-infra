@@ -4,6 +4,7 @@
     ./disk-config.nix
     ./hardware-configuration.nix
     ../../nixos/profiles/server.nix
+    ../../nixos/features/zfs.nix
   ];
 
   # Enable zram
@@ -17,10 +18,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.zfs.extraPools = [ "ironwolf" ];
-
-  # Fix for running ZFS in a virtual machine
-  # https://nixos.wiki/wiki/ZFS (at the end)
-  boot.zfs.devNodes = "/dev/disk/by-partuuid";
 
   # Networking
   networking = {
