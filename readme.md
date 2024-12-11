@@ -1,43 +1,40 @@
-# Install NixOS
+# Installation
 
-1. Boot into a live environment and clone this flake
+1. Boot into a live enviroment and clone the flake
 
-```sh
-git clone https://github.com/cmwalsh/nix-infra.git /tmp
+```bash
+git clone https://github.com/cmwalsh/nix-infra.git
 ```
 
-2. Run the partitioning script:
+2. Run the disko partitionioning script
 
-Update `nixos/host/disk-config.nix` with the id of the disk to be formatted.
-
-```sh
+```bash
 sudo nix \
-  --experimental-features "nix-command flakes" \
-  run github:nix-community/disko -- \
-  --mode disko /tmp/nix-infra/nixos/host/disko-config.nix
+    --experimental-features "nix-command flakes" \
+    run github:nix-community/disko -- --mode disko \
+    nix-infra/nixos/host/disko-config.nix
 ```
 
-3. Generate the initial Nix Config
+3. Generate an initiial NixOS configuration
 
-```sh
+```bash
 sudo nixos-generate-config --no-filesystems --root /mnt
 ```
 
-4. Copy the generated hardware-configuration to the flake
+4. Copy the `hardware-configuration.nix` file to the flake
 
-```sh
-sudo cp /etc/nixos/hardware-configuration.nix /tmp/nix-infra/nixos/host/
+```bash
+sudo cp /etc/nixos/hardware-configuration.nix nix-infra/nixos/host/
 ```
 
-5. Install NixOS
+5. Install NixOS, set a root password and reboot
 
-```sh
-sudo nixos-install --root /mnt --flake '/tmp/nix-infra#host'
+```bash
+cd nix-infra
+sudo nixos-install --root /mnt --flake .#host
 ```
 
-# After installation
-
-1. Clone the flake again to a convenient location
-2. Copy the hardware configuration from /etc/nixos/hardware-configuration.nix
-3. Generate a hostId with `head -c 8 /etc/machine-id` and add to network configuration
-4. Run `home-manager switch --flake .` and reboot
+6. Log in as root and set user passwords
+7. Log in as user and generate SSH keys
+8. Add SSH key to Github and clone the flake (using SSH)
+9. Re-copy the `hardware-configuration.nix` file and commit changes
