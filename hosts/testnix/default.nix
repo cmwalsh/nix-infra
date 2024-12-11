@@ -2,6 +2,7 @@
   imports = [
     inputs.disko.nixosModules.disko
     ./disk-config.nix
+    ./hardware-configuraton.nix
     ../../nixos/profiles/server.nix
   ];
 
