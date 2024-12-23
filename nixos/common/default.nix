@@ -62,6 +62,12 @@
       pavucontrol
       figurine
       stow
+      eza # Modern replacement for ls
+      bat # Modern replacement for cat
+      fzf # Fuzzy find
+      zoxide # Modern replacement for cd
+      ripgrep
+      mc
     ];
 
     variables = {
