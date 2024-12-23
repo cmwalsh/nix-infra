@@ -8,9 +8,9 @@
     homeDirectory = "/home/craig";
     stateVersion = "24.11";
 
-    sessionVariables = {
-      PNPM_HOME = "/home/craig/.config/pnpm/global";
-    };
+    # sessionVariables = {
+    #   PNPM_HOME = "/home/craig/.config/pnpm/global";
+    # };
 
     packages =
       (with pkgs; [
@@ -44,9 +44,13 @@
 
         # Utility
         bitwarden
-        kitty
         ventoy
         vorta
+
+        # Shell
+        zsh
+        kitty
+        starship
       ])
       ++ (with pkgs-unstable; [
         # Dev
@@ -60,64 +64,66 @@
       ]);
   };
 
+  # Enable home manager and target generic linux
   programs.home-manager.enable = true;
+  targets.genericLinux.enable = true;
 
-  # Configure Git
-  programs.git = {
-    enable = true;
-    userName = "Craig W";
-    userEmail = "craigw@pm.me";
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      push = {
-        default = "matching";
-      };
-        pull = {
-        rebase = false;
-      };
-    };
-  };
+  # # Configure Git
+  # programs.git = {
+  #   enable = true;
+  #   userName = "Craig W";
+  #   userEmail = "craigw@pm.me";
+  #   extraConfig = {
+  #     init = {
+  #       defaultBranch = "main";
+  #     };
+  #     push = {
+  #       default = "matching";
+  #     };
+  #       pull = {
+  #       rebase = false;
+  #     };
+  #   };
+  # };
 
-  # Terminal
-  programs.kitty = {
-    enable = true;
-    themeFile = "Japanesque";
+  # # Terminal
+  # programs.kitty = {
+  #   enable = true;
+  #   themeFile = "Japanesque";
 
-    font = {
-      name = "CaskaydiaCove Nerd Font";
-      size = 12;
-    };
+  #   font = {
+  #     name = "CaskaydiaCove Nerd Font";
+  #     size = 12;
+  #   };
 
-    shellIntegration = {
-      enableZshIntegration = true;
-    };
-  };
+  #   shellIntegration = {
+  #     enableZshIntegration = true;
+  #   };
+  # };
 
-  # ZSH
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+  # # ZSH
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   autosuggestion.enable = true;
+  #   syntaxHighlighting.enable = true;
 
-    initExtra = ''
-      autoload -Uz +X compinit && compinit
-      ## case insensitive path-completion
-      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-      zstyle ':completion:*' menu select
-      path+=('/home/craig/.config/pnpm/global')
+  #   initExtra = ''
+  #     autoload -Uz +X compinit && compinit
+  #     ## case insensitive path-completion
+  #     zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+  #     zstyle ':completion:*' menu select
+  #     path+=('/home/craig/.config/pnpm/global')
 
-      # kitty ssh fix
-      [[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
-    '';
-  };
+  #     # kitty ssh fix
+  #     [[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
+  #   '';
+  # };
 
-  # Starship
-  programs.starship = {
-    enable = true;
-  };
+  # # Starship
+  # programs.starship = {
+  #   enable = true;
+  # };
 
   # Setup connection to libvirt
   dconf.settings = {

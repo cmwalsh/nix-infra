@@ -61,6 +61,7 @@
       clinfo
       pavucontrol
       figurine
+      stow
     ];
 
     variables = {
