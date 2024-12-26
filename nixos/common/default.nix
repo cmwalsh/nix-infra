@@ -46,8 +46,8 @@
       borgbackup
       figurine
       stow
-      docker
-      docker-compose
+      podman
+      podman-compose
       zoxide
       eza
       bat
