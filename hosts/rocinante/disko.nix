@@ -43,6 +43,24 @@
           };
         };
       };
+      sda = {
+        type = "disk";
+        device = "/dev/sda";
+        content = {
+          type = "gpt";
+          partitions = {
+            backups = {
+              size = "100%";
+              content = {
+                type = "btrfs";
+                extraArgs = [ "-f" ];
+                mountpoint = "/mnt/backups";
+                mountOptions = [ "compress=zstd" "noatime" ];
+              };
+            };
+          };
+        };
+      };
     };
   };
 }

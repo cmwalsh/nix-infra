@@ -38,7 +38,7 @@
     };
 
     defaultGateway = "192.168.3.1";
-    nameservers = ["192.168.3.6"];
+    nameservers = ["192.168.3.1"];
   };
 
   # Users
