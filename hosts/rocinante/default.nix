@@ -7,9 +7,6 @@
 
     ../../nixos/services/ssh.nix
     ../../nixos/services/tailscale.nix
-    ../../nixos/services/podman.nix
-
-    ../../nixos/containers/omada.nix
   ];
 
   # Enable zram
@@ -54,4 +51,22 @@
 
   # Welcome message
   programs.bash.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" rocinante";
+
+  # Podman containers
+  virtualisation = {
+    containers.enable = true;
+
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+
+    oci-containers = {
+      backend = "podman";
+      containers = {
+        omdada = import ../../nixos/containers/omada.nix;
+      };
+    };
+  };
 }
