@@ -7,9 +7,9 @@
 
     ../../nixos/services/ssh.nix
     ../../nixos/services/tailscale.nix
-    ../../nixos/services/docker.nix
+    ../../nixos/services/podman.nix
 
-    ../../nixos/containers/portainer-02.nix
+    ../../nixos/containers/omada.nix
   ];
 
   # Enable zram
