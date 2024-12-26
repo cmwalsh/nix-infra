@@ -65,7 +65,7 @@
     oci-containers = {
       backend = "podman";
       containers = {
-        omdada = import ../../nixos/containers/omada.nix;
+        omada = import ../../nixos/containers/omada.nix;
       };
     };
   };
