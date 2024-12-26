@@ -22,7 +22,7 @@
       PUID = "508";
       SHOW_SERVER_LOGS = "true";
       SHOW_MONGODB_LOGS = "false";
-      TZ = "Europe/London"
+      TZ = "Europe/London";
     };
 
     ports = [
