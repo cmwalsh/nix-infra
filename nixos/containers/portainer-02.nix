@@ -13,7 +13,7 @@
 
       volumes = [
         "/var/run/docker.sock:/var/run/docker.sock"
-        "/mnt/ironwolf/appdata/portainer:/data"
+        "/home/sysadmin/containers/portainer:/data"
       ];
     };
   };
