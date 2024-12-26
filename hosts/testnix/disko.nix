@@ -43,6 +43,71 @@
           };
         };
       };
+      vdb = {
+        type = "disk";
+        device = "/dev/vdb";
+        content = {
+          type = "gpt";
+          partitions = {
+            zfs = {
+              size = "100%";
+              content = {
+                type = "zfs";
+                pool = "ironwolf";
+              };
+            };
+          };
+        };
+      };
+      vdc = {
+        type = "disk";
+        device = "/dev/vdc";
+        content = {
+          type = "gpt";
+          partitions = {
+            zfs = {
+              size = "100%";
+              content = {
+                type = "zfs";
+                pool = "ironwolf";
+              };
+            };
+          };
+        };
+      };
+    };
+    zpool = {
+      ironwolf = {
+        type = "zpool";
+        mode = {
+          topology = {
+            type = "topology";
+            vdev = [{
+              mode = "mirror";
+              members = ["vdb" "vdc"];
+            }];
+          };
+        };
+        mountpoint = "/mnt/ironwolf";
+        datasets = {
+          craig = {
+            type = "zfs_fs";
+            mountpoint = "/mnt/ironwolf/craig";
+          };
+          mary = {
+            type = "zfs_fs";
+            mountpoint = "/mnt/ironwolf/mary";
+          };
+          media = {
+            type = "zfs_fs";
+            mountpoint = "/mnt/ironwolf/media";
+          };
+          appdata = {
+            type = "zfs_fs";
+            mountpoint = "/mnt/ironwolf/appdata";
+          };
+        };
+      };
     };
   };
 }
