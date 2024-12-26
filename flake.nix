@@ -69,7 +69,7 @@
 
         specialArgs = {
           inherit inputs;
-          username = "craig";
+          username = "sysadmin";
         };
 
         modules = [
@@ -84,7 +84,7 @@
 
         specialArgs = {
           inherit inputs;
-          username = "craig";
+          username = "sysadmin";
         };
 
         modules = [
@@ -99,7 +99,7 @@
 
         specialArgs = {
           inherit inputs;
-          username = "craig";
+          username = "sysadmin";
         };
 
         modules = [
