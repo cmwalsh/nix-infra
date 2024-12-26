@@ -36,8 +36,4 @@
     "/home/sysadmin/containers/omada/data:/opt/tplink/EAPController/data"
     "/home/sysadmin/containers/omada/logs:/opt/tplink/EAPController/logs"
   ];
-
-  extraOptions = [
-    "--ulimit nofile=4096:8192"
-  ];
 }
