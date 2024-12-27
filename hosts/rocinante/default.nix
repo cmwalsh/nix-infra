@@ -38,8 +38,8 @@
     defaultGateway = "192.168.3.1";
     nameservers = ["192.168.3.1"];
 
-    firewall.allowedTCPPorts = [ "29811" "29812" "29813" "29814" "29815" "29816" ];
-    firewall.allowedUDPPorts = [ "19810" "29810" ];
+    firewall.allowedTCPPorts = [ 29811 29812 29813 29814 29815 29816 ];
+    firewall.allowedUDPPorts = [ 19810 29810 ];
   };
 
   # Users
