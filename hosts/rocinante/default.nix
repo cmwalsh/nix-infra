@@ -37,6 +37,8 @@
 
     defaultGateway = "192.168.3.1";
     nameservers = ["192.168.3.1"];
+
+    firewall.enable = false;
   };
 
   # Users
