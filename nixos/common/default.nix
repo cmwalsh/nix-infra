@@ -62,6 +62,9 @@
     };
   };
 
+  # Allows Vscode server to run
+  programs.nix-ld.enable = true;
+
   time.timeZone = "Europe/London";
 
   console.keyMap = "uk";
