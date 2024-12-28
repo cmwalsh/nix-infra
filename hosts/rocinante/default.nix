@@ -46,7 +46,7 @@
   users.users.sysadmin = {
     isNormalUser = true;
     description = "System Administrator";
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "podman"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVV3xTFd1hjc5aN6GAR3o4IolycsQ+XAtoZbT3cRXmh craig@defiant"
     ];
@@ -69,6 +69,7 @@
       backend = "podman";
       containers = {
         omada = import ../../nixos/containers/omada.nix;
+        technitium = import ../../nixos/containers/technitium.nix;
       };
     };
   };
