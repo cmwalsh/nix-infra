@@ -36,7 +36,7 @@
     };
 
     defaultGateway = "192.168.3.1";
-    nameservers = ["192.168.3.1"];
+    nameservers = ["127.0.0.1"];
 
     firewall.allowedTCPPorts = [ 29811 29812 29813 29814 29815 29816 5380 53 ];
     firewall.allowedUDPPorts = [ 19810 29810 53 ];
