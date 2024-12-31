@@ -55,6 +55,7 @@
         cryptomator
         picocrypt
         picocrypt-cli
+        ghostty
       ]);
   };
 
