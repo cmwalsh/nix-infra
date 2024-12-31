@@ -3,6 +3,7 @@
   imports = [
     inputs.disko.nixosModules.disko
     ./disko.nix
+    ./hardware.nix
 
     ../../nixos/services/zfs.nix
     ../../nixos/services/ssh.nix
