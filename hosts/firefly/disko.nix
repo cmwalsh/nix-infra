@@ -43,6 +43,24 @@
           };
         };
       };
+      nvme1n1 = {
+        type = "disk";
+        device = "/dev/nvme1n1";
+        content = {
+          type = "gpt";
+          partitions = {
+            nextcloud = {
+              size = "100%";
+              content = {
+                type = "btrfs";
+                extraArgs = [ "-f" ];
+                mountpoint = "/mnt/nextcloud";
+                mountOptions = [ "compress=zstd" "noatime" ];
+              };
+            };
+          };
+        };
+      };
       sda = {
         type = "disk";
         device = "/dev/sda";

@@ -7,11 +7,10 @@
     ../../nixos/services/zfs.nix
     ../../nixos/services/ssh.nix
     ../../nixos/services/tailscale.nix
-    ../../nixos/services/docker.nix
+    ../../nixos/services/podman.nix
     ../../nixos/services/samba.nix
 
     ../../nixos/features/intel-gpu.nix
-    ../../nixos/containers/portainer-01.nix
   ];
 
   # Enable zram
@@ -48,7 +47,7 @@
   users.users.sysadmin = {
     isNormalUser = true;
     description = "System Administrator";
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "podman"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVV3xTFd1hjc5aN6GAR3o4IolycsQ+XAtoZbT3cRXmh craig@defiant"
     ];
