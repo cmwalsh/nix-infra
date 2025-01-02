@@ -2,8 +2,8 @@
 
   imports = [
     inputs.disko.nixosModules.disko
-    ./disko.nix
     ./hardware.nix
+    ./disko.nix
 
     ../../nixos/services/zfs.nix
     ../../nixos/services/ssh.nix
@@ -24,6 +24,9 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Stop systemd trying to mount datasets
+  systemd.services.zfs-mount.enable = false;
 
   # Networking
   networking = {

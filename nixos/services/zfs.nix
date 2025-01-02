@@ -5,7 +5,7 @@
     # to any virtual storage if using a VM
     # Use uuidgen command
     devNodes = "/dev/disk/by-id";
-    forceImportAll = true;
+    forceImportAll = false;
   };
 
   services.zfs = {
