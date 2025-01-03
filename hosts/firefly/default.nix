@@ -65,4 +65,22 @@
 
   # Welcome message
   programs.bash.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" firefly";
+
+  # Podman containers
+  virtualisation = {
+    containers.enable = true;
+
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+
+    oci-containers = {
+      backend = "podman";
+      containers = {
+        albyhub = import ../../nixos/containers/albyhub.nix;
+      };
+    };
+  };
 }
