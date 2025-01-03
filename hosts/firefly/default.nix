@@ -80,6 +80,7 @@
       backend = "podman";
       containers = {
         albyhub = import ../../nixos/containers/albyhub.nix;
+        homeassistant = import ../../nixos/containers/homeassistant.nix;
       };
     };
   };
