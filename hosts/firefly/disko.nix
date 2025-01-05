@@ -97,6 +97,12 @@
     zpool = {
       ironwolf = {
         type = "zpool";
+        rootFsOptions = {
+          compression = "lz4";
+          acltype = "posixacl";
+          xattr = "sa";
+          atime = "off";
+        };
         mode = {
           topology = {
             type = "topology";
@@ -106,26 +112,62 @@
             }];
           };
         };
-        mountpoint = "/mnt/ironwolf";
         datasets = {
           craig = {
             type = "zfs_fs";
             mountpoint = "/mnt/ironwolf/craig";
+            options = {
+              compression = "lz4";
+              mountpoint = "legacy";
+            };
           };
           mary = {
             type = "zfs_fs";
             mountpoint = "/mnt/ironwolf/mary";
+            options = {
+              compression = "lz4";
+              mountpoint = "legacy";
+            };
           };
           media = {
             type = "zfs_fs";
             mountpoint = "/mnt/ironwolf/media";
+            options = {
+              compression = "lz4";
+              mountpoint = "legacy";
+            };
           };
           appdata = {
             type = "zfs_fs";
             mountpoint = "/mnt/ironwolf/appdata";
+            options = {
+              compression = "lz4";
+              mountpoint = "legacy";
+            };
           };
         };
       };
     };
+  };
+
+  # Mount the ZFS datasets
+  fileSystems."/mnt/ironwolf/craig" = {
+    device = "ironwolf/craig";
+    fsType = "zfs";
+  };
+
+  fileSystems."/mnt/ironwolf/mary" = {
+    device = "ironwolf/mary";
+    fsType = "zfs";
+  };
+
+  fileSystems."/mnt/ironwolf/media" = {
+    device = "ironwolf/media";
+    fsType = "zfs";
+  };
+
+  fileSystems."/mnt/ironwolf/appdata" = {
+    device = "ironwolf/appdata";
+    fsType = "zfs";
   };
 }

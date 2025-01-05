@@ -24,9 +24,7 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # Stop systemd trying to mount datasets
-  systemd.services.zfs-mount.enable = false;
+  boot.supportedFilesystems = [ "zfs" ];
 
   # Networking
   networking = {
@@ -55,6 +53,18 @@
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVV3xTFd1hjc5aN6GAR3o4IolycsQ+XAtoZbT3cRXmh craig@defiant"
     ];
+  };
+
+  users.users.craig = {
+    isNormalUser = true;
+    description = "Craig";
+    extraGroups = [];
+  };
+
+  users.users.mary = {
+    isNormalUser = true;
+    description = "Mary";
+    extraGroups = [];
   };
 
   users.users.media = {
