@@ -30,14 +30,14 @@
     networkmanager.enable = true;
   };
 
-  # Enable Fish Shell
-  programs.fish.enable = true;
+  # Enable ZSH
+  programs.zsh.enable = true;
 
   # Users
   users.users.craig = {
     isNormalUser = true;
     description = "Craig";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [
       "wheel"
       "networkmanager"
@@ -46,5 +46,5 @@
   };
 
   # Welcome message
-  programs.fish.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" defiant";
+  programs.zsh.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" defiant";
 }
