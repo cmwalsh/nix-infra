@@ -102,6 +102,7 @@
           acltype = "posixacl";
           xattr = "sa";
           atime = "off";
+          canmount = "on";
         };
         mode = {
           topology = {
@@ -112,71 +113,41 @@
             }];
           };
         };
-        mountpoint = "/mnt/ironwolf";
         datasets = {
           craig = {
             type = "zfs_fs";
-            mountpoint = "/mnt/ironwolf/craig";
             options = {
               compression = "lz4";
-              mountpoint = "legacy";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/craig";
             };
           };
           mary = {
             type = "zfs_fs";
-            mountpoint = "/mnt/ironwolf/mary";
             options = {
               compression = "lz4";
-              mountpoint = "legacy";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/mary";
             };
           };
           media = {
             type = "zfs_fs";
-            mountpoint = "/mnt/ironwolf/media";
             options = {
               compression = "lz4";
-              mountpoint = "legacy";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/media";
             };
           };
           appdata = {
             type = "zfs_fs";
-            mountpoint = "/mnt/ironwolf/appdata";
             options = {
               compression = "lz4";
-              mountpoint = "legacy";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/appdata";
             };
           };
         };
       };
     };
-  };
-
-  # Mount the ZFS datasets
-  fileSystems."/mnt/ironwolf/craig" = {
-    device = "ironwolf/craig";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-    neededForBoot = true;
-  };
-
-  fileSystems."/mnt/ironwolf/mary" = {
-    device = "ironwolf/mary";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-    neededForBoot = true;
-  };
-
-  fileSystems."/mnt/ironwolf/media" = {
-    device = "ironwolf/media";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-    neededForBoot = true;
-  };
-
-  fileSystems."/mnt/ironwolf/appdata" = {
-    device = "ironwolf/appdata";
-    fsType = "zfs";
-    options = [ "zfsutil" ];
-    neededForBoot = true;
   };
 }
