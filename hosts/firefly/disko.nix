@@ -154,20 +154,28 @@
   fileSystems."/mnt/ironwolf/craig" = {
     device = "ironwolf/craig";
     fsType = "zfs";
+    options = [ "zfsutil" ];
+    neededForBoot = true;
   };
 
   fileSystems."/mnt/ironwolf/mary" = {
     device = "ironwolf/mary";
     fsType = "zfs";
+    options = [ "zfsutil" ];
+    neededForBoot = true;
   };
 
   fileSystems."/mnt/ironwolf/media" = {
     device = "ironwolf/media";
     fsType = "zfs";
+    options = [ "zfsutil" ];
+    neededForBoot = true;
   };
 
   fileSystems."/mnt/ironwolf/appdata" = {
     device = "ironwolf/appdata";
     fsType = "zfs";
+    options = [ "zfsutil" ];
+    neededForBoot = true;
   };
 }
