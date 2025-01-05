@@ -112,6 +112,7 @@
             }];
           };
         };
+        mountpoint = "/mnt/ironwolf";
         datasets = {
           craig = {
             type = "zfs_fs";
