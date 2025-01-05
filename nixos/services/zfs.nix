@@ -1,10 +1,10 @@
-{ ... }: {
+{ pkgs, ... }: {
 
   boot = {
     supportedFilesystems = [ "zfs" ];
 
     zfs = {
-      forceImportRoot = false;
+      forceImportRoot = true;
       forceImportAll = true;
       devNodes = "/dev/disk/by-id";
       extraPools = [ "ironwolf" ];
