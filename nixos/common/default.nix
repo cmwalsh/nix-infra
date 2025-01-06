@@ -46,6 +46,9 @@
       borgbackup
       figurine
       stow
+      sops
+      age
+      ssh-to-age
       podman
       podman-compose
       zoxide
