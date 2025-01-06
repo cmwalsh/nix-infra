@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ pkgs, inputs, ... }: {
 
   imports = [
     inputs.disko.nixosModules.disko
@@ -75,6 +75,11 @@
   # Welcome message
   programs.bash.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" firefly";
 
+  # Host specific software
+  environment.systemPackages = with pkgs; [
+    jellyfin-ffmpeg
+  ];
+
   # Podman containers
   virtualisation = {
     containers.enable = true;
@@ -88,8 +93,9 @@
     oci-containers = {
       backend = "podman";
       containers = {
-        # albyhub = import ../../nixos/containers/albyhub.nix;
-        # homeassistant = import ../../nixos/containers/homeassistant.nix;
+        albyhub = import ../../nixos/containers/albyhub.nix;
+        homeassistant = import ../../nixos/containers/homeassistant.nix;
+        jellyfin = import ../../nixos/containers/jellyfin.nix;
       };
     };
   };
