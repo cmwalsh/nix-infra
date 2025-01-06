@@ -2,6 +2,7 @@ keys:
   - &user_craig age1a857ekjalql7s7h55h4k9gh5mzfezua3qnldwn4zdn6dx2nmkvxsj2vjpm
   - &host_defiant age1jwra0w843dt6gjenzwnypenwhjuf4tl2uchxuyx4wy274h5qau4qq6e20z
   - &host_rocinante age1qdwqel2xdrclch5g7jpetmelmhwuxpe2dj0ejs40dx7xs9n4ecrsy98fxe
+  - &host_firefly age1g20s3j3effwhhcf4lscjrjh730n8f82kt5wrp9p2r5mev0xwt4kswckkhy
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
@@ -9,3 +10,4 @@ creation_rules:
           - *user_craig
           - *host_defiant
           - *host_rocinante
+          - *host_firefly
