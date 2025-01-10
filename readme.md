@@ -11,3 +11,8 @@ This flake defines the configuration for the Serenity Homelab.
 `cp /mnt/etc/nixos/hardware-configuration.nix hosts/<host>/`
 `git add .`
 `nixos-install --flake .#<host>`
+
+# Add host to secrets
+
+`cat /home/<host>/.ssh/id_ed25519.pub | ssh-to-age`
+`sops updatekeys secrets/secrets.yaml`
