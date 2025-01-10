@@ -8,5 +8,6 @@
     enable = true;
     trustedInterfaces = [ "tailscale0" ];
     allowedUDPPorts = [ config.services.tailscale.port ];
+    useRoutingFeatures = "both";
   };
 }
