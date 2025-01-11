@@ -96,6 +96,7 @@
         albyhub = import ../../nixos/containers/albyhub.nix;
         homeassistant = import ../../nixos/containers/homeassistant.nix;
         jellyfin = import ../../nixos/containers/jellyfin.nix;
+        mealie = import ../../nixos/containers/mealie.nix;
       };
     };
   };
