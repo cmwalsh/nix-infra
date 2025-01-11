@@ -6,9 +6,9 @@
   environment = {
     ALLOW_SIGNUP = "false";
     TZ = "Europe/London";
-    BASE_URL = "http://firefly.wolf-centauri.ts.net";
-    TLS_CERTIFICATE_PATH = "/home/sysadmin/firefly.wolf-centauri.ts.net.crt";
-    TLS_PRIVATE_KEY_PATH = "/home/sysadmin/firefly.wolf-centauri.ts.net.key";
+    # BASE_URL = "http://firefly.wolf-centauri.ts.net";
+    # TLS_CERTIFICATE_PATH = "/home/sysadmin/firefly.wolf-centauri.ts.net.crt";
+    # TLS_PRIVATE_KEY_PATH = "/home/sysadmin/firefly.wolf-centauri.ts.net.key";
   };
 
   ports = [
