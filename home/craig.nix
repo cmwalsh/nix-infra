@@ -44,6 +44,9 @@
         zsh
         kitty
         starship
+
+        # Overrides
+        (callPackage ../pkgs/freeshow {})
       ])
       ++ (with pkgs-unstable; [
         # Dev
