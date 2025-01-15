@@ -22,6 +22,7 @@
         vdhcoapp
         spotify
         haruna
+        gimp
 
         # Comms
         discord
