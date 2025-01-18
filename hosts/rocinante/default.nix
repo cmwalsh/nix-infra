@@ -52,6 +52,7 @@
     extraGroups = ["wheel" "podman"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVV3xTFd1hjc5aN6GAR3o4IolycsQ+XAtoZbT3cRXmh craig@defiant"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFrvlr7g7+h7MibLN+FVoESxs/WZAF8x7z1/+izsOb/C Borg Backup"
     ];
   };
 
