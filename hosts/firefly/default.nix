@@ -12,6 +12,8 @@
     ../../nixos/services/samba.nix
 
     ../../nixos/features/intel-gpu.nix
+
+    ./backup.nix
   ];
 
   # Enable zram
