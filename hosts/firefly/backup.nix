@@ -9,7 +9,7 @@
       "/mnt/ironwolf/media"
     ];
 
-    repo = "sysadmin@100.112.8.4:firefly.serenity.lan";
+    repo = "sysadmin@100.112.8.4:/mnt/backups/firefly.serenity.lan";
 
     encryption = {
       mode = "repokey-blake2";
