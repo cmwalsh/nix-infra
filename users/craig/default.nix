@@ -34,6 +34,7 @@
         gimp
         reaper
         asunder
+        picard
         audacious
         audacity
         musescore
