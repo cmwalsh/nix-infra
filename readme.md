@@ -16,7 +16,7 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
 2. If this is the first installation on this host, generate a hardware configuration and copy it to the flake.
 
 ```bash
-nixos-generate-config --no-filesystems --root /mnt
+sudo nixos-generate-config --no-filesystems --root /mnt
 cp /mnt/etc/nixos/hardware-configuration.nix hosts/<host>/hardware.nix
 git add .
 ```
@@ -24,14 +24,14 @@ git add .
 3. Install NixOS from the flake
 
 ```bash
-nixos-install --flake .#<host>
+sudo nixos-install --flake .#<host>
 ```
 
 4. Chroot into the install and reset user password. 
 
 ```bash
 cd /mnt 
-nixos-enter
+sudo nixos-enter
 passwd craig
 exit
 ```

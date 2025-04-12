@@ -9,6 +9,6 @@
     ../nixos/locale.nix
     ../nixos/pipewire.nix
     ../nixos/podman.nix
-    ../nixos/virtmanager.nix
+    ../nixos/virt-manager.nix
   ];
 }

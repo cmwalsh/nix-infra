@@ -1,7 +1,7 @@
 { ... }: {
 
   imports = [
-    ./workstation.nix
+    ./desktop.nix
     ../nixos/nvidia.nix
   ];
 }
