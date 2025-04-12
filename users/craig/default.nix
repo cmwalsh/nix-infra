@@ -23,6 +23,8 @@
         nixd
         nil
         nixpkgs-fmt
+        ansible
+        ansible-lint
 
         # Multimedia
         ffmpeg-full
