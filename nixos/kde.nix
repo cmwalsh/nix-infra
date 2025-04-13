@@ -31,13 +31,6 @@
     ];
   };
 
-  # Gnome Integration
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
-
   # KDE Partition Manager
   programs = {
     partition-manager.enable = true;
