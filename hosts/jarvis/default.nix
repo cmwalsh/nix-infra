@@ -36,6 +36,9 @@
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
+
+    # Recognise external blu ray drive
+    kernelModules = [ "sg" ];
   };
 
   # Networking
