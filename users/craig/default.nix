@@ -49,7 +49,7 @@
         # Productivity
         obsidian
         thunderbird-128
-        vivaldi
+        brave
 
         # Utility
         bitwarden

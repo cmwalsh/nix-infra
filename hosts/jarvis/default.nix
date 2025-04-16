@@ -26,12 +26,12 @@
       };
     };
 
-    # plymouth.enable = true;
+    plymouth.enable = true;
 
-    # # Enable "Silent Boot"
-    # consoleLogLevel = 0;
-    # initrd.systemd.enable = true;
-    # initrd.verbose = false;
+    # Enable "Silent Boot"
+    consoleLogLevel = 0;
+    initrd.systemd.enable = true;
+    initrd.verbose = false;
 
     kernelParams = [
       "quiet"
