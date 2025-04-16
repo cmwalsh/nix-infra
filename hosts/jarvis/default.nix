@@ -16,8 +16,14 @@
   # Bootloader
   boot = {
     loader = {
-      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
+
+      grub = {
+        enable = true;
+        devices = [ "nodev" ];
+        efiSupport = true;
+        useOSProber = true;
+      };
     };
 
     # plymouth.enable = true;
@@ -47,6 +53,16 @@
     hostId = "0acc259e";
     domain = "serenity.lan";
     networkmanager.enable = true;
+  };
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable autodiscovery of network printers
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   # Firmware updates
