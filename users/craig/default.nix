@@ -23,6 +23,7 @@
         nixd
         nil
         nixpkgs-fmt
+        python3
         ansible
         ansible-lint
 
@@ -55,6 +56,7 @@
         bitwarden
         ventoy
         vorta
+        protonvpn-gui
 
         # Shell
         zsh
