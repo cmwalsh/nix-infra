@@ -88,6 +88,21 @@
     ];
   };
 
+  # Keep it secret, keep it safe
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+
+    age = {
+      sshKeyPaths = [ "/home/sysadmin/.ssh/id_ed25519" ];
+      keyFile = "/home/sysadmin/.config/sops/age/keys.txt";
+      generateKey = false;
+    };
+
+    secrets = {
+      test = {};
+    };
+  };
+
   programs.zsh.enable = true;
   programs.zsh.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" rocinante";
 }

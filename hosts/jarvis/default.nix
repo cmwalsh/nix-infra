@@ -91,6 +91,21 @@
     ];
   };
 
+  # Keep it secret, keep it safe
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+
+    age = {
+      sshKeyPaths = [ "/home/craig/.ssh/id_ed25519" ];
+      keyFile = "/home/craig/.config/sops/age/keys.txt";
+      generateKey = false;
+    };
+
+    secrets = {
+      test = {};
+    };
+  };
+
   programs.zsh.enable = true;
   programs.zsh.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" jarvis";
 }
