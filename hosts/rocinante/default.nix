@@ -5,6 +5,7 @@
     inputs.nixos-hardware.nixosModules.common-pc
     inputs.nixos-hardware.nixosModules.common-pc-ssd
     inputs.disko.nixosModules.disko
+    inputs.sops-nix.nixosModules.sops
     ./disks.nix
 
     ../../nixos/services/technitium.nix
