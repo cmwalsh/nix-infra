@@ -7,7 +7,7 @@ This is the flake that defines my homelab. All workstations and servers run NixO
 1. Clone the git repository.
 
 ```bash
-git clone https://gitlab.com/cwalsh/nix-infra.git
+git clone git@github.com:cmwalsh/nix-infra.git
 cd nix-infra
 ```
 
