@@ -1,0 +1,21 @@
+# Generate age private key: 
+# age-keygen -o ~/.config/sops/age/keys.txt
+
+# Generate age public key: 
+# age-keygen -y ~/.config/sops/age/keys.txt
+
+# Generate a host key from SSH: 
+# cat ~/.ssh/id_ed25519_key.pub | ssh-to-age
+
+# Add secrets
+# sops secrets/secrets.yaml
+
+# Re-key secrets file after updating keys
+# sops updatekeys secrets/secrets.yaml
+keys:
+  - &craig_defiant age1jwra0w843dt6gjenzwnypenwhjuf4tl2uchxuyx4wy274h5qau4qq6e20z
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+    - age:
+      - *craig_defiant
