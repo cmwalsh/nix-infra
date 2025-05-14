@@ -97,13 +97,15 @@
     defaultSopsFile = ../../secrets/secrets.yaml;
 
     age = {
-      sshKeyPaths = [ "/home/craig/.ssh/id_ed25519" ];
-      keyFile = "/home/craig/.config/sops/age/keys.txt";
+      keyFile = "/var/lib/private/sops/age/keys.txt";
       generateKey = false;
     };
 
     secrets = {
-      test = {};
+      route53-env = {
+        format = "yaml";
+        sopsFile = ../../secrets/route53.yaml;
+      };
     };
   };
 

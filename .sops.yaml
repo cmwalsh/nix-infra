@@ -1,26 +1,28 @@
-# Generate age private key:
+# Make a user key
 # mkdir -p ~/.config/sops/age
 # age-keygen -o ~/.config/sops/age/keys.txt
 
-# Generate age public key: 
+# Display the user public key:
 # age-keygen -y ~/.config/sops/age/keys.txt
 
-# Generate a host key from SSH: 
-# cat ~/.ssh/id_ed25519.pub | ssh-to-age
+# Make a host key:
+# sudo mkdir -p /var/lib/private/sops/age
+# sudo age-keygen -o /var/lib/private/sops/age/keys.txt
+
+# Display the host public key:
+# sudo age-keygen -y /var/lib/private/sops/age/keys.txt
 
 # Add secrets
 # sops secrets/secrets.yaml
 
-# Re-key secrets file after updating keys
+# Rekey secrets.yaml after editing recipients in .sops.yaml:
 # sops updatekeys secrets/secrets.yaml
 keys:
-  - &defiant age1jwra0w843dt6gjenzwnypenwhjuf4tl2uchxuyx4wy274h5qau4qq6e20z
-  - &jarvis age1cu8qmzxu0lghgn80yuxpm8eu3t74tcrpldlexh5lfshjedactsmqpju3rc
-  - &rocinante age1yj5qlrqjukxraa5mm9d4rn773w0nteame37p2z9y52ud6f0hrytqxqgccj
+  - &user_craig age1sexve9ckdm8v8m82gy89dr9atzghe3h25lj3gvk2r7kkvqenxy0q84c33n
+  - &host_jarvis age10gu3pq6jchd2aa4s7jdrqdecv9tzdfx6tyelk7tu96g8l8466e2qykz8d7
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - age:
-      - *defiant
-      - *jarvis
-      - *rocinante
+      - *user_craig
+      - *host_jarvis
