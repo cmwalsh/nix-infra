@@ -6,10 +6,10 @@
 
     certs."cwbt.uk" = {
       domain = "cwbt.uk";
-      extraDomainName = [ "*.cwbt.uk" ];
+      extraDomainNames = [ "*.cwbt.uk" ];
       dnsProvider = "route53";
       dnsPropagationCheck = true;
-      credentialsFile = /run/secrets/route53-env;
+      environmentFile = /run/secrets/route53-env;
     };
   };
 
@@ -17,12 +17,14 @@
     enable = true;
 
     virtualHosts = {
+      # Jellyfin
       "media.cwbt.uk" = {
         forceSSL = true;
         useACMEHost = "cwbt.uk";
         locations."/".proxyPass = "http://100.68.27.20:8096";
       };
 
+      # Home Assistant
       "ha.cwbt.uk" = {
         forceSSL = true;
         useACMEHost = "cwbt.uk";
