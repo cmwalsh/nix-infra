@@ -8,7 +8,7 @@
     inputs.sops-nix.nixosModules.sops
     ./disks.nix
 
-    ../../nixos/services/technitium.nix
+    ../../nixos/services/blocky.nix
     ../../nixos/containers/omada.nix
     ../../nixos/containers/crafty.nix
   ];
@@ -87,21 +87,6 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOVV3xTFd1hjc5aN6GAR3o4IolycsQ+XAtoZbT3cRXmh craig@defiant"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICtwCkGPSmJ66tDHT7Us3YA71WGJN4g/dfmuUd1AVCIK craig@jarvis"
     ];
-  };
-
-  # Keep it secret, keep it safe
-  sops = {
-    defaultSopsFile = ../../secrets/secrets.yaml;
-
-    age = {
-      sshKeyPaths = [ "/home/sysadmin/.ssh/id_ed25519" ];
-      keyFile = "/home/sysadmin/.config/sops/age/keys.txt";
-      generateKey = false;
-    };
-
-    secrets = {
-      test = {};
-    };
   };
 
   programs.zsh.enable = true;
