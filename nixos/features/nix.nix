@@ -65,5 +65,10 @@
   # Needed for vscode ssh to work
   programs.nix-ld.enable = true;
 
+  # Allow the EOL electron version
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-33.4.11"
+  ];
+
   system.stateVersion = "24.11";
 }
