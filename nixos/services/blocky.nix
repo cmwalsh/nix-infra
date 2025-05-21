@@ -19,10 +19,6 @@
           ads = [
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
           ];
-
-          nsfw = [
-            "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw.txt"
-          ];
         };
 
         whiteLists = {
@@ -32,7 +28,7 @@
         };
 
         clientGroupsBlock = {
-          default = [ "ads" "nsfw" ];
+          default = [ "ads" ];
         };
       };
     };

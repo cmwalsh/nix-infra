@@ -9,6 +9,13 @@
     shellAliases = {
       ls = "eza";
       cat = "bat";
+
+      gs = "git status --short";
+      gf = "git fetch";
+      ga = "git add";
+      gp = "git push";
+      gu = "git pull";
+      gl = "git log";
     };
 
     sessionVariables = {

@@ -26,6 +26,7 @@
         python3
         ansible
         ansible-lint
+        lima
 
         # Multimedia
         ffmpeg-full
@@ -63,6 +64,8 @@
         ventoy
         vorta
         protonvpn-gui
+        via
+        podman-desktop
 
         # Shell
         zsh
