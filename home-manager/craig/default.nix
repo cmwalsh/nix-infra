@@ -27,6 +27,7 @@
         ansible
         ansible-lint
         lima
+        jetbrains.webstorm
 
         # Multimedia
         ffmpeg-full
