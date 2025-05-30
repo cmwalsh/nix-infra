@@ -14,7 +14,6 @@
         brettm12345.nixfmt-vscode
         pkief.material-icon-theme
         vue.volar
-        vue.vscode-typescript-vue-plugin
       ];
 
       userSettings = {
