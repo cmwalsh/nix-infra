@@ -3,6 +3,7 @@
   imports = [
     ./dotfiles/git.nix
     ./dotfiles/kitty.nix
+    ./dotfiles/ghostty.nix
     ./dotfiles/libvirt.nix
     ./dotfiles/starship.nix
     ./dotfiles/zsh.nix
