@@ -44,6 +44,7 @@
         audacity
         musescore
         makemkv
+        inkscape
 
         # Photography
         rapid-photo-downloader

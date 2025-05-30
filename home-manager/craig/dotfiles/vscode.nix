@@ -13,7 +13,7 @@
         jnoortheen.nix-ide
         brettm12345.nixfmt-vscode
         pkief.material-icon-theme
-        vue.volar
+        svelte.svelte-vscode
       ];
 
       userSettings = {
@@ -26,6 +26,9 @@
         "breadcrumbs.enabled" = false;
         "update.mode" = "manual";
         "ansible.lightspeed.enabled" = false;
+        "svelte.enable-ts-plugin" = true;
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.formatOnSave" = true;
       };
     };
   };
