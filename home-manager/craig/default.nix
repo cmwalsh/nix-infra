@@ -14,12 +14,12 @@
   home = {
     username = "craig";
     homeDirectory = "/home/craig";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
 
     packages =
       (with pkgs; [
         # Dev
-        nodejs_23
+        nodejs_24
         deno
         pnpm
         nixpkgs-fmt
@@ -62,7 +62,6 @@
         filezilla
 
         # Utility
-        ventoy
         vorta
         protonvpn-gui
         via

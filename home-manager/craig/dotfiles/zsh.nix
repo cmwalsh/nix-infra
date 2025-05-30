@@ -24,7 +24,7 @@
       PNPM_HOME = "/home/craig/.config/pnpm/global";
     };
     
-    initExtra = ''
+    initContent = ''
       # case insensitive path-completion
       autoload -U compinit && compinit
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

@@ -17,12 +17,12 @@
       rubik
       corefonts
       vistafonts
+      inter
 
       # Nerd Fonts
-      inconsolata-nerdfont
-      fira-code-nerdfont
-      inter-nerdfont
-      nerdfonts
+      nerd-fonts.inconsolata
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
     ];
   };
 }
