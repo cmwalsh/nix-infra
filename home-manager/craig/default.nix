@@ -27,7 +27,6 @@
         python3
         ansible
         ansible-lint
-        lima
         jetbrains.webstorm
 
         # Multimedia
@@ -72,12 +71,12 @@
         # Shell
         zsh
         kitty
+        ghostty
         starship
 
         # Games
         jdk
         prismlauncher
-        amidst
       ])
       ++ (with pkgs-unstable; [
         # Dev
@@ -93,7 +92,6 @@
         cryptomator
         picocrypt
         picocrypt-cli
-        ghostty
       ]);
   };
 
