@@ -89,6 +89,7 @@
       "networkmanager"
       "libvirtd"
       "podman"
+      "input"
     ];
   };
 

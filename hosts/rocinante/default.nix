@@ -8,7 +8,7 @@
     inputs.sops-nix.nixosModules.sops
     ./disks.nix
 
-    ../../nixos/services/blocky.nix
+    ../../nixos/services/technitium.nix
     ../../nixos/containers/omada.nix
     ../../nixos/containers/crafty.nix
   ];

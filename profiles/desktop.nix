@@ -14,6 +14,7 @@
     ../nixos/features/fonts.nix
     ../nixos/features/virtualisation.nix
     ../nixos/features/podman.nix
+    ../nixos/features/via.nix
 
     ../nixos/services/mdns.nix
     ../nixos/services/tailscale.nix
