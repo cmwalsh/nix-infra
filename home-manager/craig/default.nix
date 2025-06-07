@@ -22,6 +22,7 @@
         # Dev
         nodejs_24
         deno
+        bun
         pnpm
         nixpkgs-fmt
         python3
