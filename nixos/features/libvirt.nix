@@ -19,6 +19,9 @@
         };
       };
     };
+
+    # Enable USB redirection
+    spiceUSBRedirection.enable = true;
   };
 
   programs.virt-manager.enable = true;
