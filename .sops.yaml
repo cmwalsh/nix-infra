@@ -1,0 +1,28 @@
+# Make a user key
+# mkdir -p ~/.config/sops/age
+# ssh-to-age -private-key -i ~/.ssh/id_ed25519 > ~/.config/sops/age/keys.txt
+
+# Display the user public key:
+# age-keygen -y ~/.config/sops/age/keys.txt
+
+# Make a host key:
+# cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age
+
+# Display the host public key:
+# sudo age-keygen -y /var/lib/private/sops/age/keys.txt
+
+# Add secrets
+# sops secrets/secrets.yaml
+
+# Rekey secrets.yaml after editing recipients in .sops.yaml:
+# sops updatekeys secrets/secrets.yaml
+
+keys:
+  - &user_craig age1jwra0w843dt6gjenzwnypenwhjuf4tl2uchxuyx4wy274h5qau4qq6e20z
+  - &host_raven age1wrtgdgg6plrkn30rprvqk5476f56qevcfd68fx7p2wgfvxqj9seqyljf2v
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+        - *user_craig
+        - *host_raven
