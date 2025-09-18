@@ -19,6 +19,7 @@
       corefonts
       vistafonts
       inter
+      work-sans
 
       # Nerd Fonts
       nerd-fonts.inconsolata
