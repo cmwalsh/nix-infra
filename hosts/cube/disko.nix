@@ -11,27 +11,29 @@
         type = "disk";
         device = "/dev/sda";
         content = {
-          type = "gpt";
+          type = "table";
+          format = "msdos";
           partitions = {
             boot = {
               size = "1M";
-              type = "EF02";
+              type = "bios_grub";
             };
 
             ESP = {
               size = "1G";
-              type = "8300";
+              type = "primary";
               content = {
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/boot";
-                mountOptions = [ "defaults" ];
+                label = "nixos-boot";
               };
             };
 
             root = {
               name = "root-part";
               size = "100%";
+              type = "primary";
               content = {
                 type = "zfs";
                 pool = "rpool";
