@@ -10,7 +10,7 @@
     useUserPackages = true;
 
     users = {
-      craig = import ../../home/raven/sysadmin.nix;
+      sysadmin = import ../../home/raven/sysadmin.nix;
     };
 
     extraSpecialArgs = {

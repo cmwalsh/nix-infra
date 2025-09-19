@@ -10,7 +10,7 @@
     useUserPackages = true;
 
     users = {
-      craig = import ../../home/cube/sysadmin.nix;
+      sysadmin = import ../../home/cube/sysadmin.nix;
     };
 
     extraSpecialArgs = {

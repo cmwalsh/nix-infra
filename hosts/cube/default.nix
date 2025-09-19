@@ -39,10 +39,12 @@
   # Kernel
   boot = {
     initrd.availableKernelModules = [
-      "xhci_pci"
+      "ehci_pci"
       "ahci"
-      "usbhid"
+      "uhci_hcd"
+      "xhci_pci_renesas"
       "uas"
+      "usbhid"
       "sd_mod"
     ];
 
