@@ -13,15 +13,18 @@
         content = {
           type = "gpt";
           partitions = {
-            MBR = {
-              name = "MBR";
+            boot = {
+              size = "1M";
               type = "EF02";
+            };
+
+            ESP = {
               size = "1G";
+              type = "8300";
               content = {
                 type = "filesystem";
-                format = "vfat";
+                format = "ext4";
                 mountpoint = "/boot";
-                mountOptions = [ "umask=0077" ];
               };
             };
 
