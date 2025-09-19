@@ -13,9 +13,9 @@
         content = {
           type = "gpt";
           partitions = {
-            ESP = {
-              name = "ESP";
-              type = "EF00";
+            MBR = {
+              name = "MBR";
+              type = "EF02";
               size = "1G";
               content = {
                 type = "filesystem";
