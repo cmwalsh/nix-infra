@@ -11,7 +11,7 @@ cd nix-infra
 
 # Format the disk with Disko
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest /
- -- --mode destroy,format,mount hosts/<host>/disko.nix
+ -- --mode destroy,format,mount --flake .#<host>
 
 # Generate a hardware configuration
 sudo nixos-generate-config --no-filesystems --root /mnt
