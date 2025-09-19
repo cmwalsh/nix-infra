@@ -1,4 +1,4 @@
-{ inputs, lib, ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -9,17 +9,17 @@
     disk = {
       sda = {
         type = "disk";
-        device = lib.mkDefault "/dev/sda";
+        # device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
-            boot = {
+            bios = {
               size = "1M";
               type = "EF02";
               priority = 0;
             };
 
-            ESP = {
+            boot = {
               size = "1G";
               type = "8300";
               content = {

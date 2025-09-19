@@ -46,19 +46,16 @@
       "uas"
       "usbhid"
       "sd_mod"
-      "zfs"
     ];
 
     kernelModules = [
       "kvm-intel"
-      "zfs"
     ];
 
     loader = {
       grub = {
         enable = true;
-        version = 2;
-        device = "/dev/sda";
+        devices = [ "/dev/sda" ];
         copyKernels = true;
         zfsSupport = true;
       };
