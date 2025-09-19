@@ -6,7 +6,7 @@ Greetings, this flake defines my homelab infrastructure. It is in constant flux 
 
 ```bash
 # Clone the repo
-git clone git@gitlab.com:craigw/nix-infra.git
+git clone git@github.com:cmwalsh/nix-infra.git
 cd nix-infra
 
 # Format the disk with Disko
