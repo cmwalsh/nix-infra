@@ -55,7 +55,6 @@
     loader = {
       grub = {
         enable = true;
-        device = "/dev/sda";
         zfsSupport = true;
       };
 
@@ -64,7 +63,11 @@
     };
 
     supportedFilesystems = [ "zfs" ];
-    zfs.extraPools = [ "backup" ];
+    zfs.extraPools = [
+      "rpool"
+      "backup"
+    ];
+    zfs.devNodes = "/dev/disk/by-id";
   };
 
   # ZFS
