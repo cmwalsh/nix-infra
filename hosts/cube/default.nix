@@ -59,7 +59,8 @@
         enable = true;
         version = 2;
         device = "/dev/sda";
-        efiSupport = false;
+        copyKernels = true;
+        zfsSupport = true;
       };
 
       systemd-boot.enable = false;
