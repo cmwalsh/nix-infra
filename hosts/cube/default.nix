@@ -55,7 +55,7 @@
     loader = {
       grub = {
         enable = true;
-        devices = [ "/dev/sda" ];
+        devices = lib.mkForce [ "/dev/sda" ];
       };
 
       systemd-boot.enable = false;
