@@ -55,6 +55,7 @@
     loader = {
       grub = {
         enable = true;
+        device = "/dev/disk/by-id/";
       };
 
       systemd-boot.enable = false;
