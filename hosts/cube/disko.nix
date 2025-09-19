@@ -16,24 +16,16 @@
             bios = {
               size = "1M";
               type = "EF02";
-            };
-
-            boot = {
-              size = "1G";
-              type = "8300";
-              content = {
-                type = "filesystem";
-                format = "ext4";
-                mountpoint = "/boot";
-              };
+              attributes = [ 0 ];
             };
 
             root = {
-              name = "root-part";
+              name = "root";
               size = "100%";
               content = {
-                type = "zfs";
-                pool = "rpool";
+                type = "filesystem";
+                format = "ext4";
+                mountpoint = "/";
               };
             };
           };
@@ -96,66 +88,6 @@
     };
 
     zpool = {
-      rpool = {
-        type = "zpool";
-
-        options = {
-          ashift = "12";
-          autotrim = "on";
-        };
-
-        rootFsOptions = {
-          mountpoint = "none";
-          compression = "zstd";
-          atime = "off";
-          xattr = "sa";
-          acltype = "posixacl";
-          dnodesize = "auto";
-          normalization = "formD";
-        };
-
-        datasets = {
-          "root" = {
-            type = "zfs_fs";
-            mountpoint = "/";
-            options = {
-              mountpoint = "legacy";
-              canmount = "noauto";
-            };
-          };
-
-          "nix" = {
-            type = "zfs_fs";
-            mountpoint = "/nix";
-            options = {
-              atime = "off";
-            };
-          };
-
-          "home" = {
-            type = "zfs_fs";
-            mountpoint = "/home";
-            options = {
-              atime = "on";
-            };
-          };
-
-          "var_log" = {
-            type = "zfs_fs";
-            mountpoint = "/var/log";
-          };
-
-          "tmp" = {
-            type = "zfs_fs";
-            mountpoint = "/tmp";
-            options = {
-              sync = "disabled";
-              acltype = "posixacl";
-            };
-          };
-        };
-      };
-
       backup = {
         type = "zpool";
 
