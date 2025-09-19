@@ -53,8 +53,9 @@
     ];
 
     loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
+      grub.enable = true;
+      grub.efiSupport = false;
+      grub.device = "/dev/sda";
     };
 
     supportedFilesystems = [ "zfs" ];
