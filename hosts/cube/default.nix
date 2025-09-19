@@ -56,7 +56,7 @@
     };
 
     supportedFilesystems = [ "zfs" ];
-    # zfs.extraPools = [ ];
+    zfs.extraPools = [ "backup" ];
   };
 
   # ZFS
@@ -80,7 +80,7 @@
     domain = "serenity.lan";
     dhcpcd.enable = false;
 
-    interfaces.enp2s0.ipv4.addresses = [
+    interfaces.eno1.ipv4.addresses = [
       {
         address = "192.168.3.59";
         prefixLength = 24;
