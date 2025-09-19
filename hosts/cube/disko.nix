@@ -9,14 +9,13 @@
     disk = {
       sda = {
         type = "disk";
-        # device = "/dev/sda";
+        device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
             bios = {
               size = "1M";
               type = "EF02";
-              priority = 0;
             };
 
             boot = {

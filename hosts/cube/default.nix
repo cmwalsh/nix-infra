@@ -55,9 +55,6 @@
     loader = {
       grub = {
         enable = true;
-        devices = [ "/dev/sda" ];
-        copyKernels = true;
-        zfsSupport = true;
       };
 
       systemd-boot.enable = false;
