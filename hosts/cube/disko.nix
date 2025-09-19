@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 
 {
   imports = [
@@ -9,31 +9,29 @@
     disk = {
       sda = {
         type = "disk";
-        device = "/dev/sda";
+        device = lib.mkDefault "/dev/sda";
         content = {
-          type = "table";
-          format = "msdos";
+          type = "gpt";
           partitions = {
             boot = {
               size = "1M";
-              type = "bios_grub";
+              type = "EF02";
+              priority = 0;
             };
 
             ESP = {
               size = "1G";
-              type = "primary";
+              type = "8300";
               content = {
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/boot";
-                label = "nixos-boot";
               };
             };
 
             root = {
               name = "root-part";
               size = "100%";
-              type = "primary";
               content = {
                 type = "zfs";
                 pool = "rpool";

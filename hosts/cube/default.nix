@@ -46,10 +46,12 @@
       "uas"
       "usbhid"
       "sd_mod"
+      "zfs"
     ];
 
     kernelModules = [
       "kvm-intel"
+      "zfs"
     ];
 
     loader = {
@@ -57,8 +59,7 @@
         enable = true;
         version = 2;
         device = "/dev/sda";
-        copyKernels = true;
-        zfsSupport = true;
+        efiSupport = false;
       };
 
       systemd-boot.enable = false;
