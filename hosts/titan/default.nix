@@ -87,7 +87,7 @@
     ];
 
     defaultGateway = "192.168.3.1";
-    nameservers = [ "127.0.0.1" ];
+    nameservers = [ "192.168.3.4" ];
   };
 
   # Users
