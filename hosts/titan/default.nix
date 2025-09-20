@@ -55,6 +55,7 @@
 
     supportedFilesystems = [ "zfs" ];
     zfs.extraPools = [ "ironwolf" ];
+    zfs.devNodes = "/dev/disk/by-id";
   };
 
   # ZFS
