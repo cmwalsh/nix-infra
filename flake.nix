@@ -88,6 +88,19 @@
           };
         };
 
+        # 5800X NAS
+        titan = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            ./hosts/titan
+          ];
+
+          specialArgs = {
+            inherit inputs;
+          };
+        };
+
         # HP MicroServer Gen 8
         cube = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
