@@ -26,7 +26,7 @@
             };
 
             root = {
-              name = "root-part1";
+              name = "root-part";
               size = "100%";
               content = {
                 type = "zfs";
@@ -43,12 +43,12 @@
         content = {
           type = "gpt";
           partitions = {
-            zfs = {
-              name = "root-part2";
+            backup = {
               size = "100%";
               content = {
-                type = "zfs";
-                pool = "rpool";
+                type = "filesystem";
+                format = "ext4";
+                mountpoint = "/mnt/backup";
               };
             };
           };
@@ -131,21 +131,6 @@
     zpool = {
       rpool = {
         type = "zpool";
-
-        mode = {
-          topology = {
-            type = "topology";
-            vdev = [
-              {
-                mode = "mirror";
-                members = [
-                  "nvme0n1"
-                  "nvme1n1"
-                ];
-              }
-            ];
-          };
-        };
 
         options = {
           ashift = "12";
