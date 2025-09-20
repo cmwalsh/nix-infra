@@ -7,6 +7,8 @@
 
     ../../nixos
     ../../nixos/profiles/server.nix
+    ../../nixos/features/intel-gpu.nix
+    ../../nixos/services/samba.nix
   ];
 
   # Hardware

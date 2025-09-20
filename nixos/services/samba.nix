@@ -18,19 +18,8 @@
         "load printers" = "no";
       };
 
-      shared = {
-        "path" = "/ironwolf/shared";
-        "browseable" = "yes";
-        "read only" = "no";
-        "guest ok" = "yes";
-        "create mask" = "0644";
-        "directory mask" = "0755";
-        "force user" = "sysadmin";
-        "force group" = "users";
-      };
-
       media = {
-        "path" = "/ironwolf/media";
+        "path" = "/mnt/ironwolf/media";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "yes";
@@ -41,7 +30,7 @@
       };
 
       craig = {
-        "path" = "/ironwolf/craig";
+        "path" = "/mnt/ironwolf/craig";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";
@@ -52,7 +41,7 @@
       };
 
       mary = {
-        "path" = "/ironwolf/mary";
+        "path" = "/mnt/ironwolf/mary";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";

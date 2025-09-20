@@ -13,7 +13,7 @@
       with pkgs;
       [
         # Graphics
-        vainfo
+        intel-gpu-tools
       ]
     );
   };
