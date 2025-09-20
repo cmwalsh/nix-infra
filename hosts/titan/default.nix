@@ -40,9 +40,8 @@
       "xhci_pci"
       "ahci"
       "usbhid"
-      "usb_storage"
+      "uas"
       "sd_mod"
-      "sr_mod"
     ];
 
     kernelModules = [
