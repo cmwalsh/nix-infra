@@ -62,7 +62,6 @@
           type = "gpt";
           partitions = {
             zfs = {
-              name = "data1";
               size = "100%";
               content = {
                 type = "zfs";
@@ -80,7 +79,6 @@
           type = "gpt";
           partitions = {
             zfs = {
-              name = "data2";
               size = "100%";
               content = {
                 type = "zfs";
@@ -98,7 +96,6 @@
           type = "gpt";
           partitions = {
             zfs = {
-              name = "data3";
               size = "100%";
               content = {
                 type = "zfs";
@@ -116,7 +113,6 @@
           type = "gpt";
           partitions = {
             zfs = {
-              name = "data4";
               size = "100%";
               content = {
                 type = "zfs";
@@ -201,7 +197,7 @@
                 members = [
                   "sda"
                   "sdb"
-                  "adc"
+                  "sdc"
                   "sdd"
                 ];
               }
