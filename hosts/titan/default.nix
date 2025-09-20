@@ -9,6 +9,7 @@
     ../../nixos/profiles/server.nix
     ../../nixos/features/intel-gpu.nix
     ../../nixos/services/samba.nix
+    ../../nixos/services/jellyfin.nix
   ];
 
   # Hardware
