@@ -7,7 +7,6 @@
 
     ../../nixos
     ../../nixos/profiles/server.nix
-    ../../nixos/features/intel-gpu.nix
   ];
 
   # Hardware
@@ -54,8 +53,13 @@
     };
 
     supportedFilesystems = [ "zfs" ];
-    zfs.extraPools = [ "ironwolf" ];
-    zfs.devNodes = "/dev/disk/by-id";
+
+    zfs = {
+      forceImportRoot = true;
+      forceImportAll = true;
+      devNodes = "/dev/disk/by-id";
+      extraPools = [ "ironwolf" ];
+    };
   };
 
   # ZFS
@@ -63,7 +67,10 @@
     autoScrub = {
       enable = true;
       interval = "monthly";
-      pools = [ "rpool" ];
+      pools = [
+        "rpool"
+        "ironwolf"
+      ];
     };
 
     trim = {

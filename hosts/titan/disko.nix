@@ -43,12 +43,12 @@
         content = {
           type = "gpt";
           partitions = {
-            backup = {
+            appdata = {
               size = "100%";
               content = {
                 type = "filesystem";
                 format = "ext4";
-                mountpoint = "/mnt/backup";
+                mountpoint = "/mnt/appdata";
               };
             };
           };
@@ -211,48 +211,40 @@
         };
 
         rootFsOptions = {
-          mountpoint = "none";
           compression = "zstd";
           atime = "off";
           xattr = "sa";
           acltype = "posixacl";
           dnodesize = "auto";
           normalization = "formD";
+          canmount = "on";
         };
 
         datasets = {
-          "ironwolf" = {
-            type = "zfs_fs";
-            mountpoint = "/ironwolf";
-            options = {
-              mountpoint = "legacy";
-            };
-          };
-
           "craig" = {
             type = "zfs_fs";
-            mountpoint = "/ironwolf/craig";
             options = {
-              mountpoint = "legacy";
-              atime = "on";
+              compression = "lz4";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/craig";
             };
           };
 
           "mary" = {
             type = "zfs_fs";
-            mountpoint = "/ironwolf/mary";
             options = {
-              mountpoint = "legacy";
-              atime = "on";
+              compression = "lz4";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/mary";
             };
           };
 
           "media" = {
             type = "zfs_fs";
-            mountpoint = "/ironwolf/media";
             options = {
-              mountpoint = "legacy";
-              recordsize = "1M";
+              compression = "lz4";
+              canmount = "on";
+              mountpoint = "/mnt/ironwolf/media";
             };
           };
         };
