@@ -131,7 +131,21 @@
     zpool = {
       rpool = {
         type = "zpool";
-        mode = "mirror";
+
+        mode = {
+          topology = {
+            type = "topology";
+            vdev = [
+              {
+                mode = "mirror";
+                members = [
+                  "nvme0n1"
+                  "nvme1n1"
+                ];
+              }
+            ];
+          };
+        };
 
         options = {
           ashift = "12";
@@ -192,7 +206,23 @@
 
       ironwolf = {
         type = "zpool";
-        mode = "raidz1";
+
+        mode = {
+          topology = {
+            type = "topology";
+            vdev = [
+              {
+                mode = "raidz1";
+                members = [
+                  "sda"
+                  "sdb"
+                  "adc"
+                  "sdd"
+                ];
+              }
+            ];
+          };
+        };
 
         options = {
           ashift = "12";
