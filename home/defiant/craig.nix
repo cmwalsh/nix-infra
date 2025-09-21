@@ -54,6 +54,8 @@
         # Productivity
         thunderbird-128
         onlyoffice-desktopeditors
+        hunspell
+        hunspellDicts.en_GB-large
         filezilla
         gnucash
 
