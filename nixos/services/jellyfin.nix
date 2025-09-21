@@ -13,4 +13,7 @@
     pkgs.jellyfin-web
     pkgs.jellyfin-ffmpeg
   ];
+
+  # https://wiki.nixos.org/wiki/Jellyfin#Troubleshooting_VAAPI_and_Intel_QSV
+  systemd.services.jellyfin.environment.LIBVA_DRIVER_NAME = "iHD";
 }

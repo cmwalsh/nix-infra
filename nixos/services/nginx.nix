@@ -16,11 +16,11 @@
       };
 
       # Jellyfin
-      # "media.cwbt.uk" = {
-      #   forceSSL = true;
-      #   useACMEHost = "cwbt.uk";
-      #   locations."/".proxyPass = "http://192.168.3.5:8096";
-      # };
+      "media.cwbt.uk" = {
+        forceSSL = true;
+        useACMEHost = "cwbt.uk";
+        locations."/".proxyPass = "http://192.168.3.5:8096";
+      };
     };
   };
 
