@@ -50,6 +50,17 @@
         "force user" = "mary";
         "force group" = "users";
       };
+
+      isos = {
+        "path" = "/mnt/ironwolf/craig/ISOs";
+        "browseable" = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "craig";
+        "force group" = "users";
+      };
     };
   };
 
