@@ -18,6 +18,7 @@
       "com.bitwarden.desktop"
       "com.github.sakya.corechess"
       "io.github.mimoguz.tripeaks_neue"
+      "net.pokerth.PokerTH"
     ];
   };
 }

@@ -8,6 +8,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
 
     users = {
       craig = import ../../home/defiant/craig.nix;

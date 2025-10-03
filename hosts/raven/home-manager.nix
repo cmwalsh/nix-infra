@@ -8,6 +8,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
 
     users = {
       sysadmin = import ../../home/raven/sysadmin.nix;

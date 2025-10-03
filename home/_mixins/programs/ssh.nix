@@ -37,6 +37,17 @@
           TERM = "xterm-256color";
         };
       };
+
+      "holodeck" = {
+        host = "holodeck";
+        hostname = "192.168.3.30";
+        user = "sysadmin";
+        # identityFile = "~/.ssh/id_ed25519";
+
+        setEnv = {
+          TERM = "xterm-256color";
+        };
+      };
     };
   };
 }
