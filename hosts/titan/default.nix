@@ -10,6 +10,7 @@
     ../../nixos/features/intel-gpu.nix
     ../../nixos/services/samba.nix
     ../../nixos/services/jellyfin.nix
+    ../../nixos/services/mealie.nix
   ];
 
   # Hardware
