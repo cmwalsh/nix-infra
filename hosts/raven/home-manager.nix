@@ -2,8 +2,12 @@
 
 {
   imports = [
+    inputs.quadlet-nix.nixosModules.quadlet
     inputs.home-manager.nixosModules.home-manager
   ];
+
+  # Enable the Quadlet systemd generator
+  virtualisation.quadlet.enable = true;
 
   home-manager = {
     useGlobalPkgs = true;

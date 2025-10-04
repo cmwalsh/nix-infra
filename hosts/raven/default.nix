@@ -94,6 +94,10 @@
 
     defaultGateway = "192.168.3.1";
     nameservers = [ "127.0.0.1" ];
+
+    firewall.allowedTCPPorts = [
+      8080 # Dashy
+    ];
   };
 
   # Users
@@ -101,6 +105,8 @@
     isNormalUser = true;
     description = "System Administrator";
     shell = pkgs.zsh;
+    linger = true;
+    autoSubUidGidRange = true;
     extraGroups = [
       "wheel"
       "podman"
