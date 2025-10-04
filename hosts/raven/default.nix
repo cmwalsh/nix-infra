@@ -15,6 +15,7 @@
     ../../nixos/services/technitium.nix
     ../../nixos/services/acme.nix
     ../../nixos/services/nginx.nix
+    ../../nixos/containers/omada.nix
   ];
 
   # Hardware
