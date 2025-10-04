@@ -10,7 +10,6 @@
     ../../nixos/features/intel-gpu.nix
     ../../nixos/services/samba.nix
     ../../nixos/services/jellyfin.nix
-    ../../nixos/services/mealie.nix
   ];
 
   # Hardware
@@ -101,11 +100,17 @@
     nameservers = [ "192.168.3.4" ];
   };
 
+  networking.firewall.allowedTCPPorts = [
+    9000 # Mealie
+  ];
+
   # Users
   users.users.sysadmin = {
     isNormalUser = true;
     description = "System Administrator";
     shell = pkgs.zsh;
+    linger = true;
+    autoSubUidGidRange = true;
     extraGroups = [
       "wheel"
       "podman"
