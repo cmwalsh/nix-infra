@@ -102,6 +102,7 @@
 
   networking.firewall.allowedTCPPorts = [
     9000 # Mealie
+    8080 # Smokeping
   ];
 
   # Users

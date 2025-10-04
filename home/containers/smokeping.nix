@@ -7,25 +7,29 @@
 
   virtualisation.quadlet = {
     volumes = {
-      mealie-data = {};
+      smokeping-config = {};
+      smokeping-data = {};
     };
 
     containers = {
-      mealie = {
+      smokeping = {
         containerConfig = {
-          image = "ghcr.io/mealie-recipes/mealie:v3.3.0";
-          name = "mealie";
+          image = "lscr.io/linuxserver/smokeping:latest";
+          name = "smokeping";
 
           publishPorts = [
-            "9000:9000"
+            "8080:80"
           ];
 
           volumes = [
-            "mealie-data:/app/data/"
+            "smokeping-config:/config"
+            "smokeping-data:/data"
           ];
 
           environments = {
-            ALLOW_SIGNUP = "false";
+            PUID = "1003";
+            PGID = "100";
+            TZ = "Europe/London";
           };
         };
 

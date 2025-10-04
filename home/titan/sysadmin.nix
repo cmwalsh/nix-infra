@@ -3,7 +3,7 @@
 {
   imports = [
     ../common.nix
-    ../containers/mealie.nix
+    ../containers/smokeping.nix
   ];
 
   home = {

@@ -26,7 +26,6 @@
 
     # Quadlet Nix
     quadlet-nix.url = "github:SEIAROTg/quadlet-nix";
-    quadlet-nix.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs =
