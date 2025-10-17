@@ -6,7 +6,6 @@
     ../features/plymouth.nix
     ../features/bluetooth.nix
     ../features/libvirt.nix
-    ../features/podman.nix
 
     ../services/ssh.nix
     ../services/tailscale.nix

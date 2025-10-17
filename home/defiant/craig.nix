@@ -52,7 +52,7 @@
         mumble
 
         # Productivity
-        thunderbird-128
+        thunderbird
         onlyoffice-desktopeditors
         hunspell
         hunspellDicts.en_GB-large
