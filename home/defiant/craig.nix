@@ -50,6 +50,7 @@
         discord
         teams-for-linux
         mumble
+        zoom-us
 
         # Productivity
         thunderbird
