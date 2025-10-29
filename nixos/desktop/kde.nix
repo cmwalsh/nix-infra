@@ -17,6 +17,7 @@
     kdePackages.filelight
     kdePackages.sddm-kcm
     onlyoffice-desktopeditors
+    exfatprogs
   ];
 
   # Make Firefox use the KDE file picker.
