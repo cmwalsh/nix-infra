@@ -19,6 +19,7 @@
       "com.github.sakya.corechess"
       "io.github.mimoguz.tripeaks_neue"
       "net.pokerth.PokerTH"
+      "org.gnome.gitlab.somas.Apostrophe"
     ];
   };
 }
