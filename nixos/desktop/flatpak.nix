@@ -20,6 +20,7 @@
       "io.github.mimoguz.tripeaks_neue"
       "net.pokerth.PokerTH"
       "org.gnome.gitlab.somas.Apostrophe"
+      "net.cozic.joplin_desktop"
     ];
   };
 }
