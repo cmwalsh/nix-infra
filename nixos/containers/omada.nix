@@ -7,8 +7,8 @@
 
   virtualisation.quadlet = {
     volumes = {
-      omada-data = {};
-      omada-logs = {};
+      omada-data = { };
+      omada-logs = { };
     };
 
     containers = {
@@ -47,7 +47,10 @@
     ];
 
     allowedTCPPortRanges = [
-      { from = 29811; to = 29817; }
+      {
+        from = 29811;
+        to = 29817;
+      }
     ];
 
     allowedUDPPorts = [
